@@ -37,10 +37,14 @@ In total, the features I managed to generate from the information provided were
 
 I then did another correlation check, and there were no particular features that stood out predominantly. I experimented with subsets of features. Using 9 ['auction','unique_auctions','country','mean_bids_per_auction','device','ip','time','std'] features, 3 of which were engineered provided the best results in terms of AUC.
 
-
 ## Machine Learning Model
-The models I tried using on this were XGBoost RandomForestClassifier, sklearn's RandomForestClassifier, CatBoostClassifier, SVM and for the train test split I tried sklearn's KFold and StratifiedShuffleSplit. The combination that provided the best results were sklearn's RandomForestClassifier(criterion = 'entropy') with StratifiedShuffleSplit. 
 
-## Takeaways
-As these was my first machine learning project, the EDA portion was guided by instructors and the selection of models and feature engineering was left to us. I looked up the methodology of several of the previous competitors and tried to implement what I could from there. While the selection of the models and train test split method was guided by trial and error, I hope to better understand the intricies of each of them and better implement them in the future.
+The models I tried were XGBoost RandomForestClassifier, sklearn's RandomForestClassifier, CatBoostClassifier and for the train test split I tried sklearn's KFold and StratifiedShuffleSplit. The combination that provided the best results were sklearn's RandomForestClassifier(criterion = 'entropy') with StratifiedShuffleSplit. 
+
+
+
+## Conclusion
+
+Looking at the leaderboards, the highest private AUC was about 0.9405. I am quite satisfied to be able to achieve the results I did for my first machine learning project. I looked at the methodology of several of the competitors and believe that the biggest difference was in the amount of engineered features. Instead of continuning to further tweak this model, I plan to look more in depth into other competitions and developing a better understanding of the situations where different models shine and insights on feature engineering as well.
+
 
